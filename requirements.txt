@@ -1,24 +1,43 @@
-# --- Core tooling -------------------------------------------------
-papermill==2.5.0            # executes the notebook head‑lessly
-ipykernel==6.29.3           # required by papermill
+# ------------------------------------------------------------------
+#  Core tooling
+# ------------------------------------------------------------------
+papermill==2.5.0
+ipykernel==6.29.3
 
-# --- Azure Machine Learning SDK ----------------------------------
-azureml-core==1.55.0        # submit jobs, register models
-azureml-mlflow==1.55.0      # lets the notebook log to MLflow
+# ------------------------------------------------------------------
+#  Azure ML SDK (v1) + MLflow logger
+# ------------------------------------------------------------------
+azureml-core==1.55.0
+azureml-mlflow==1.55.0
+azureml-dataset-runtime==1.55.0       # dataset helpers used in utils_nlp
 
-# --- Deep‑learning / NLP stack (CPU builds) ----------------------
-torch==2.1.2+cpu            # PyTorch (CPU wheel)
+# ------------------------------------------------------------------
+#  Deep‑learning / NLP stack  (CPU wheels – works on cpu‑cluster)
+# ------------------------------------------------------------------
+torch==2.1.2+cpu
 torchvision==0.16.2+cpu
 torchaudio==2.1.2+cpu
 --extra-index-url https://download.pytorch.org/whl/cpu
 
-transformers==4.38.1        # Hugging Face BERT implementation
-sentencepiece==0.1.99       # tokenizer for many multilingual models
-datasets==2.18.0            # HF datasets utility
+transformers==4.38.1
+datasets==2.18.0
+sentencepiece==0.1.99
 
-# --- Traditional ML & utilities ----------------------------------
-nltk==3.8.1           # <-- NEW
-spacy==3.7.4          # <-- some utils_nlp helpers need it
+# ------------------------------------------------------------------
+#  utils_nlp dependencies
+# ------------------------------------------------------------------
+nltk==3.8.1
+spacy==3.7.4
+dask[dataframe]==2024.4.1
+pyarrow==15.0.2            # parquet I/O for dask / datasets
+fastparquet==2024.2.0
 scikit-learn==1.3.2
 pandas==2.2.1
+numpy==1.26.4
 tqdm==4.66.2
+matplotlib==3.8.4
+
+# ------------------------------------------------------------------
+#  Optional quality‑of‑life (harmless if notebook doesn’t use them)
+# ------------------------------------------------------------------
+seaborn==0.13.2
