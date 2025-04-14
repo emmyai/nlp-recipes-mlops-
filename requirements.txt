@@ -42,4 +42,6 @@ matplotlib==3.8.4
 #  Optional quality‑of‑life (harmless if notebook doesn’t use them)
 # ------------------------------------------------------------------
 seaborn==0.13.2
-google_drive_downloader==0.4
+
+# utils_nlp extra
+googledrivedownloader==0.4     # ← correct package name
