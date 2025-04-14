@@ -13,11 +13,13 @@ from utils_nlp.common.pytorch_utils import compute_training_steps
 from utils_nlp.models.transformers.common import MAX_SEQ_LEN, Transformer
 from utils_nlp.models.transformers.datasets import SCDataSet, SPCDataSet
 
-supported_models = [
-    list(x.pretrained_config_archive_map)
-    for x in MODEL_FOR_SEQUENCE_CLASSIFICATION_MAPPING
-]
-supported_models = sorted([x for y in supported_models for x in y])
+supported_models = []
+for config_class in MODEL_FOR_SEQUENCE_CLASSIFICATION_MAPPING:
+    archive_map = getattr(config_class, "pretrained_config_archive_map", None)
+    if archive_map:
+        supported_models.extend(archive_map.keys())
+supported_models = sorted(supported_models)
+
 
 
 class Processor:
