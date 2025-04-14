@@ -51,7 +51,6 @@ googledrivedownloader==0.4     # ← correct package name
 azureml-pipeline-core==1.55.0
 azureml-pipeline-steps==1.55.0
 azureml-train-core==1.55.0
-azureml-train-dnn==1.55.0
 azureml-widgets==1.55.0      # for RunDetails() in the notebook UI
 
 # ------------------------------------------------------------------
