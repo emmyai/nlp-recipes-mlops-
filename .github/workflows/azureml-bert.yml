@@ -1,0 +1,46 @@
+name: Run BERT text‑classification on AzureML
+on:
+  workflow_dispatch:        # manual trigger
+  push:
+    paths:
+      - examples/text_classification/**
+      - run_tc_bert.py
+      - .github/workflows/azureml-bert.yml
+
+jobs:
+  run-notebook:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v4
+
+    - name: Log in to Azure
+      uses: azure/login@v2
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install papermill azureml-core==1.55.0
+
+    - name: Execute notebook on Azure ML
+      env:
+        AML_SUBSCRIPTION_ID: ${{ secrets.AML_SUBSCRIPTION_ID }}
+        AML_RESOURCE_GROUP:  ${{ secrets.AML_RESOURCE_GROUP }}
+        AML_WORKSPACE:       ${{ secrets.AML_WORKSPACE }}
+        AML_COMPUTE:         ${{ secrets.AML_COMPUTE }}
+      run: |
+        python run_tc_bert.py
+
+    - name: Upload executed notebook
+      uses: actions/upload-artifact@v4
+      with:
+        name: bert-run
+        path: executed_tc_bert.ipynb
