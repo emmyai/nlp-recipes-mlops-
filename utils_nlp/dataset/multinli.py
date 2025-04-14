@@ -21,7 +21,7 @@ from utils_nlp.dataset.url_utils import extract_zip, maybe_download
 from utils_nlp.models.transformers.common import MAX_SEQ_LEN
 from utils_nlp.models.transformers.sequence_classification import Processor
 
-URL = "http://www.nyu.edu/projects/bowman/multinli/multinli_1.0.zip"
+URL = "https://nlp.stanford.edu/data/multinli_1.0.zip"
 
 # Source - https://github.com/nyu-mll/jiant/blob/master/scripts/download_glue_data.py
 URL_JIANT_MNLI_TSV = "https://firebasestorage.googleapis.com/v0/b/mtl-sentence-representations.appspot.com/o/data%2FMNLI.zip?alt=media&token=50329ea1-e339-40e2-809c-10c40afff3ce"
