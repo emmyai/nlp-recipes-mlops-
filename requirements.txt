@@ -1,0 +1,22 @@
+# --- Core tooling -------------------------------------------------
+papermill==2.5.0            # executes the notebook head‑lessly
+ipykernel==6.29.3           # required by papermill
+
+# --- Azure Machine Learning SDK ----------------------------------
+azureml-core==1.55.0        # submit jobs, register models
+azureml-mlflow==1.55.0      # lets the notebook log to MLflow
+
+# --- Deep‑learning / NLP stack (CPU builds) ----------------------
+torch==2.1.2+cpu            # PyTorch (CPU wheel)
+torchvision==0.16.2+cpu
+torchaudio==2.1.2+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+transformers==4.38.1        # Hugging Face BERT implementation
+sentencepiece==0.1.99       # tokenizer for many multilingual models
+datasets==2.18.0            # HF datasets utility
+
+# --- Traditional ML & utilities ----------------------------------
+scikit-learn==1.3.2
+pandas==2.2.1
+tqdm==4.66.2
