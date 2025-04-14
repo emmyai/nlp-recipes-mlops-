@@ -17,6 +17,8 @@ sentencepiece==0.1.99       # tokenizer for many multilingual models
 datasets==2.18.0            # HF datasets utility
 
 # --- Traditional ML & utilities ----------------------------------
+nltk==3.8.1           # <-- NEW
+spacy==3.7.4          # <-- some utils_nlp helpers need it
 scikit-learn==1.3.2
 pandas==2.2.1
 tqdm==4.66.2
