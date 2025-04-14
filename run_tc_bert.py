@@ -11,8 +11,10 @@ pm.execute_notebook(
         workspace_name = os.getenv("AML_WORKSPACE"),
         subscription_id= os.getenv("AML_SUBSCRIPTION_ID"),
         resource_group = os.getenv("AML_RESOURCE_GROUP"),
-        compute_target_name = os.getenv("AML_COMPUTE")   # <-- rename to match the notebook
+        compute_target_name = os.getenv("AML_COMPUTE"),   # <-- rename to match the notebook
         # If your notebook really uses 'compute_name', keep that key instead.
+        cluster_name   = os.getenv("AML_COMPUTE"),   # <‑‑ add this
+        create_cluster = False                       # <‑‑ add this
     ),
     kernel_name="python3"        # <-- force a kernel that exists on the runner
 )
