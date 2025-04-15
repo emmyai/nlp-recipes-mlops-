@@ -1,2 +1,6 @@
 data/
 examples/
+data_cache/
+.ipynb_checkpoints/
+.git/
+*.ipynb
