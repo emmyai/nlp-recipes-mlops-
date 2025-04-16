@@ -58,7 +58,12 @@ CONDA_GPU = {
 
 PIP_BASE = {
     "allennlp": "allennlp==0.8.4",
-    "azureml-sdk": "azureml-sdk[automl,notebooks,contrib]==1.0.85",
+    "azureml-core": "azureml-core==1.55.0",
+    "azureml-defaults": "azureml-defaults==1.55.0",
+    "azureml-train-core": "azureml-train-core==1.55.0",
+    "azureml-pipeline-steps": "azureml-pipeline-steps==1.55.0",
+    "azureml-widgets": "azureml-widgets==1.55.0",
+
     "azureml-train-automl": "azureml-train-automl==1.0.85",
     "azureml-dataprep": "azureml-dataprep==1.1.8",
     "azureml-widgets": "azureml-widgets==1.0.85",
