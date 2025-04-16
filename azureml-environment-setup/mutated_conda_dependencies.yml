@@ -1,23 +1,34 @@
-name: bert-environ_1
+name: bert-env_01
 channels:
   - conda-forge
   - defaults
 dependencies:
   - python=3.9
-  - pip
   - numpy
   - pandas
   - scikit-learn
+  - pip
   - pip:
       - azureml-core
       - azureml-defaults
+      - azureml-pipeline-core
+      - azureml-pipeline-steps
+      - azureml-dataset-runtime
+      - azureml-widgets
+      - azureml-mlflow
       - torch
       - transformers
       - datasets
       - tokenizers
       - accelerate
       - tqdm
+      - nltk
       - spacy
-      - dask  # Latest Python 3.9 compatible version
-
+      - dask[dataframe]
+      - pyarrow
+      - fastparquet
+      - matplotlib
+      - seaborn
+      - googledrivedownloader
+      - jsonline
 
