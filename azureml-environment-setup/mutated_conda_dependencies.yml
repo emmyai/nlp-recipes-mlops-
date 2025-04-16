@@ -1,4 +1,4 @@
-name: bert-env_01
+name: bert-env_02
 channels:
   - conda-forge
   - defaults
@@ -29,6 +29,6 @@ dependencies:
       - fastparquet
       - matplotlib
       - seaborn
-      - googledrivedownloader
+      - googledrivedownloader==0.4
       - jsonline
 

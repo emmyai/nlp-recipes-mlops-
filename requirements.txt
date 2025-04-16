@@ -44,7 +44,7 @@ matplotlib
 seaborn
 
 # utils_nlp extra
-googledrivedownloader    # ← correct package name
+googledrivedownloader==0.4    # ← correct package name
 # ------------------------------------------------------------------
 #  EXTRA Azure ML sub‑packages used in the BERT pipeline
 # ------------------------------------------------------------------
