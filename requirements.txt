@@ -7,9 +7,9 @@ ipykernel==6.29.3
 # ------------------------------------------------------------------
 #  Azure ML SDK (v1) + MLflow logger
 # ------------------------------------------------------------------
-azureml-core==1.55.0
-azureml-mlflow==1.55.0
-azureml-dataset-runtime==1.55.0       # dataset helpers used in utils_nlp
+azureml-core==1.47.0
+azureml-mlflow==1.47.0
+azureml-dataset-runtime==1.47.0        # dataset helpers used in utils_nlp
 
 # ------------------------------------------------------------------
 #  Deep‑learning / NLP stack  (CPU wheels – works on cpu‑cluster)
