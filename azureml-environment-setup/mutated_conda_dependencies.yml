@@ -11,7 +11,7 @@ dependencies:
   - pip:
       - azureml-core
       - azureml-defaults
-      - azureml-pipeline-cor
+      - azureml-pipeline-core
       - azureml-pipeline-steps
       - azureml-dataset-runtime
       - azureml-widgets
@@ -31,4 +31,5 @@ dependencies:
       - seaborn==0.13.2
       - googledrivedownloader==0.4
       - jsonlines==3.1.0
+      - azureml-train-core
 

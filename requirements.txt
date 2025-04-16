@@ -22,6 +22,10 @@ torchaudio==2.1.2+cpu
 transformers==4.8.2
 datasets==1.6.0
 sentencepiece==0.1.99
+azureml-pipeline-core
+azureml-pipeline-steps
+azureml-train-core
+azureml-widgets 
 
 # ------------------------------------------------------------------
 #  utils_nlp dependencies
@@ -48,10 +52,7 @@ googledrivedownloader==0.4     # ← correct package name
 # ------------------------------------------------------------------
 #  EXTRA Azure ML sub‑packages used in the BERT pipeline
 # ------------------------------------------------------------------
-azureml-pipeline-core
-azureml-pipeline-steps
-azureml-train-core
-azureml-widgets     # for RunDetails() in the notebook UI
+    # for RunDetails() in the notebook UI
 
 # ------------------------------------------------------------------
 #  Misc utilities still missing
